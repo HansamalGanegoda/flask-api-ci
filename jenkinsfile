@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    
+    environment {
+        // Example environment variables
+        MY_ENV_VAR = 'some_value'
+        ANOTHER_VAR = 'another_value'
+    }
+    
+    stages {
+        stage('Build') {
+            steps {
+                echo "Building the project..."
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Running tests..."
+            }
+        }
+    }
+}
